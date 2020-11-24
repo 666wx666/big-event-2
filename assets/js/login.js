@@ -63,7 +63,7 @@ $('#loginForm').on('submit', function (e) {
                 time: 2000,
                 },
                 function () {
-                    location.href = 'index.html'
+                    location.href = 'index.html';
                 }
             )
         }
