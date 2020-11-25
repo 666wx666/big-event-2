@@ -60,7 +60,7 @@ $('#loginForm').on('submit', function (e) {
             }
             localStorage.setItem('token', res.token)
             layer.msg(res.message, {
-                time: 2000,
+                time: 0,
                 },
                 function () {
                     location.href = 'index.html';
