@@ -1,4 +1,16 @@
 $(function () {
+    getAvatarAndName()
+    $('#logoutBtn').click(function () {
+        layer.confirm('确定退出', {icon: 3, title:'提示'}, function(index){
+            //do something
+            localStorage.removeItem('token')
+            location.href = 'login.html'
+            layer.close(index);
+        }); 
+    })
+})
+
+function getAvatarAndName() {
     $.ajax({
         url: '/my/userinfo',
         // headers: {
@@ -32,12 +44,4 @@ $(function () {
 
        
     })
-    $('#logoutBtn').click(function () {
-        layer.confirm('确定退出', {icon: 3, title:'提示'}, function(index){
-            //do something
-            localStorage.removeItem('token')
-            location.href = 'login.html'
-            layer.close(index);
-        }); 
-    })
-})
+}
